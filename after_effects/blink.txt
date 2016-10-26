@@ -1,0 +1,4 @@
+//applyTo: opacity
+blinkSpeed =10;
+n = Math.sin(time*blinkSpeed);
+if (n<=0) 0 else 100;

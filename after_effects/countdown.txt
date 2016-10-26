@@ -1,0 +1,6 @@
+startT = 0;
+endT = .5;
+beginVal = 0;
+endVal = 3120;
+t = linear(time,startT,endT,beginVal,endVal);
+Math.floor(t)

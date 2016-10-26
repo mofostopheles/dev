@@ -1,0 +1,13 @@
+startT = 20;
+endT = 25;
+beginVal = 00;
+endVal = 20;
+t = linear(time,startT,endT,beginVal,endVal);
+if (t < 10)
+{
+"0" + Math.floor(t);
+}
+else
+{
+Math.floor(t);
+}

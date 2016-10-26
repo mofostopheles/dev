@@ -1,0 +1,2 @@
+var temp = this.transform.position[0];
+[wiggle(5, 450)[0], temp]
