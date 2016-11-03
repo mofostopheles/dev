@@ -213,7 +213,7 @@ void writeIntroScreen()
 void writeToScreen(String pText, int pX, int pY)
 {
   //TFTscreen.background(0, 0, 0);
-  
+  //foo
   char charBuf[32];
   pText.toCharArray(charBuf, 32);
   
