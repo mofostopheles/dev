@@ -10,6 +10,8 @@
  arloemerson@gmail.com
  code for measuring wave frequency
  
+ implemented a TFT screen
+ 
  */
 
 #include <TFT.h>  // Arduino LCD library
@@ -58,9 +60,10 @@ void setup()
   TFTscreen.stroke(255,255,255);
   TFTscreen.setTextSize(1);
   String("hello").toCharArray(mBuffer, 16);
-  TFTscreen.text( foo, 0, 0);
+  TFTscreen.text( mIntroText, 0, 0);
   TFTscreen.setTextSize(5); 
   
+  delay(5000);
 }
 
 void loop()
@@ -143,10 +146,10 @@ void loop()
 
 void writeToScreen(String pText)
 {
-  TFTscreen.stroke(255,255,255);TFTscreen.stroke(255,255,255);
+  TFTscreen.stroke(255,255,255);
   TFTscreen.setTextSize(2);
-  pText.toCharArray(foo, 16);
-  TFTscreen.text( foo, 0, 0);
+  pText.toCharArray(mIntroText, 16);
+  TFTscreen.text( mIntroText, 0, 0);
   TFTscreen.setTextSize(5); 
 }
 
