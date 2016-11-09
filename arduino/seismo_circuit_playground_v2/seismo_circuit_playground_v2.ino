@@ -26,6 +26,8 @@
   number the sensor will report, so that highest readings will light up all the LEDs.
   Setting this to numbers lower than the sensor readings will bias the LED meter to react
   stronger to lower readings. Play around with it to see.
+  Note: the values returned from your seismometer depend among other things, the strength of the magnet, 
+  number of coil windings and any hysteresis and energy loss effects present in the circuit.
 */
 static int mSensorCeiling = 22;
 
