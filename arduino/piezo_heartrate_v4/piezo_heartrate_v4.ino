@@ -1,19 +1,15 @@
-#include <TFT.h>  // Arduino LCD library
+#include <TFT.h>
 #include <SPI.h>
 
-// pin definition for the Uno
 #define cs   9
 #define dc   7
 #define rst  8  
 
 TFT TFTscreen = TFT(cs, dc, rst);
 
-int oldvalue = 0;
 int averagedReading = 0;
 int mCenterLine = 12;
 int xPos = 160;
-int mLastPlotY = 0;
-int mSamples = 4;
 
 void setup() 
 {
@@ -32,7 +28,7 @@ void loop()
   
   for(int i=0; i<sampleHeight; i++)
   { 
-    // Average over mSamples measurements
+    // Average over sampleHeight measurements
     averagedReading += analogRead(A2);
   }
 
@@ -46,14 +42,15 @@ void loop()
   {
     xPos = 160;
     TFTscreen.background(100,0,0);
-    
-    
-    char labelTmpText[4];
-  dtostrf(sampleHeight, 2, 2, labelTmpText);
-  TFTscreen.stroke(255,255,255);
-  TFTscreen.setTextSize(1); 
-  TFTscreen.text( labelTmpText, 2, 2);
-  
+   
+   //running this messes with the refresh rate big time 
+/*  
+char labelTmpText[4];
+dtostrf(sampleHeight, 2, 2, labelTmpText);
+TFTscreen.stroke(255,255,255);
+TFTscreen.setTextSize(1); 
+TFTscreen.text( labelTmpText, 2, 2);
+*/
     
 
   } 
