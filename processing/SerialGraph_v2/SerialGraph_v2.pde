@@ -5,14 +5,15 @@ Serial mPort;
 int mXPos = 1;         
 String mInString = "";
 float mInByte; 
-int mYCenterLine = 100;
+static int mYCenterLine = 560;
 int mPreviousY = 0;
 int mPreviousX = 0;
-static int mYFactor = 6;
+static int mYFactor = 25;
+static int mXDistance = 1;
 
 void setup ()
 {
-  size(500, 200);          
+  size(1920, 1080);          
   //println(Serial.list());
   //mPort = new Serial(this, Serial.list()[0], 115200);
   mPort = new Serial(this, "COM112", 115200);
@@ -25,7 +26,8 @@ void setup ()
 void centerline()
 {  
   stroke(0, 100, 255);
-  line(0, 100, 500, 100);
+  strokeWeight(1);
+  line(0, height/2, width, height/2);
 }
 
 void draw ()
@@ -42,10 +44,12 @@ void draw ()
   else
   {
     // increment the horizontal position:
-    mXPos+=4; 
+    mXPos+=mXDistance; 
   }
    
-  stroke(255, 0, 0);  
+  stroke(255, 0, 0);
+  strokeWeight(5);
+  strokeCap(ROUND);
   line(mPreviousX, mPreviousY, mXPos, (mInByte * mYFactor) + mYCenterLine);
   mPreviousY = int((mInByte * mYFactor) + mYCenterLine);
   mPreviousX = mXPos;
