@@ -16,7 +16,7 @@ void setup ()
   size(1920, 1080);          
   //println(Serial.list());
   //mPort = new Serial(this, Serial.list()[0], 115200);
-  mPort = new Serial(this, "COM112", 115200);
+  mPort = new Serial(this, "COM116", 115200);
   // don't generate a serialEvent() unless you get a newline character:
   mPort.bufferUntil('\n');
   background(0, 0, 0);  
@@ -26,7 +26,7 @@ void setup ()
 void centerline()
 {  
   stroke(0, 100, 255);
-  strokeWeight(1);
+  strokeWeight(2);
   line(0, height/2, width, height/2);
 }
 
@@ -48,7 +48,7 @@ void draw ()
   }
    
   stroke(255, 0, 0);
-  strokeWeight(5);
+  strokeWeight(8);
   strokeCap(ROUND);
   line(mPreviousX, mPreviousY, mXPos, (mInByte * mYFactor) + mYCenterLine);
   mPreviousY = int((mInByte * mYFactor) + mYCenterLine);
