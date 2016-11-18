@@ -47,17 +47,17 @@ for x1 in range(0, 200):
                 
 
 ##add some grass...
-                mc.setBlock(x+x1+2, y+1, z+3, 31) 
-                mc.setBlock(x+x1+3, y+1, z+3, 31)
+                mc.setBlock(x+x1+2, y+1, z+3, grass) 
+                mc.setBlock(x+x1+3, y+1, z+3, grass)
 
 ##make a column torch thing with some blocks
                 for t1 in range(0, 4):
-                        mc.setBlock(x+x1+2, y+t1, z+4, 155)
-                        mc.setBlock(x+x1+3, y+t1, z+4, 155)
+                        mc.setBlock(x+x1+2, y+t1, z+4, stone)
+                        mc.setBlock(x+x1+3, y+t1, z+4, stone)
                         
 ##put something special on top
-                mc.setBlock(x+x1+2, y+4, z+4, 10)
-                mc.setBlock(x+x1+3, y+4, z+4, 10)
+                mc.setBlock(x+x1+2, y+4, z+4, glowstone)
+                mc.setBlock(x+x1+3, y+4, z+4, glowstone)
                 
 ##add a torch or something every 11th block
         if x1 % 11 == 0:
@@ -65,6 +65,6 @@ for x1 in range(0, 200):
                 mc.setBlock(x+x1, y, z-3, stone)
                 mc.setBlock(x+x1, y+1, z-3, stone)
                 mc.setBlock(x+x1, y+2, z-3, stone)
-                mc.setBlock(x+x1, y+3, z-3, netherack)
+                mc.setBlock(x+x1, y+3, z-3, glowstone)
 
                 
