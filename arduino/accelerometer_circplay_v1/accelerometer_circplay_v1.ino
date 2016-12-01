@@ -1,27 +1,23 @@
+/*
+
+  This code accesses the accelerometer on the Adafruit Circuit Playground, sending the "Y" data
+  to the serial port for talking to the Excel plug-in.
+
+  Arlo Emerson, 2016, Microsoft Edu Workshop
+
+*/
 
 #include <Adafruit_CircuitPlayground.h>
-
 #include <Wire.h>
 #include <SPI.h>
 
-
-//  A variable to hold the previous seismograph reading.
-int mPreviousRead = 0;
+// Constants that appear in the serial message.
+const String DELIMITER = ",";
+const String GROUP_ID = "groupID";
+const String DEVICE_ID = "deviceID";
 
 // A variable to hold the current seismograph reading.
 int mCurrentRead = 0;
-
-// A variable used to hold the difference between the previous and current readings.
-float mDifference = 0;
-
-// A variable used to hold the calulated percentage difference between the previous and current readings.
-float mPercentChange = 0;
-
-// Multiplier of 100 to convert calculated value to a percentage
-static int mConvertToPercentage = 100;
-
-// Multiplier to set the scale of the output. Increase if the results are too small to graph well.
-static int mScale = 10;
 
 // A time interval in milliseconds used as a delay between each iteration of the main loop.
 static int mDelayTime = 75;
@@ -35,27 +31,8 @@ void setup()
 
 void loop()
 {
-  // Read the raw seismograph from the Arduino on analog input pin A0.
-  //mCurrentRead = CircuitPlayground.motionY();
-  Serial.println(CircuitPlayground.motionY(), 2);
-
-/*
-  // Find the difference between the previous and current readings.
-  mDifference = mCurrentRead - mPreviousRead;
-
-  // Divide the difference by the previous reading and multiply by 100 to convert to a percentage.
-  mPercentChange = mDifference / mPreviousRead * mConvertToPercentage;
-
-  // Multiply by the scale factor. Increase to amplify the signal values, and decrease to diminish them.
-  mPercentChange *= mScale;
-
-  // Send the collected data to the computer via the serial connection.
+  mCurrentRead = CircuitPlayground.motionY();
   sendToSerial();
-
-  // Set the previous reading (for the next loop) to be equal to the current reading.
-  mPreviousRead = mCurrentRead;
-*/
-  // Pause to increase stability and to allow for serial communications to be processed.
   delay(mDelayTime);
 }
 
@@ -73,24 +50,20 @@ void sendToSerial()
     serial message.
 
   */
-  /*
-    Serial.print(groupID);
-    Serial.print(",");
-    Serial.print(deviceID);
-    Serial.print(",");
+  
+  Serial.print(GROUP_ID);
+  Serial.print(DELIMITER);
+  Serial.print(DEVICE_ID);
+  Serial.print(DELIMITER);
 
-    // Current timestamp in milliseconds.
-    Serial.print(millis());
-    Serial.print(",");
+  // Current timestamp in milliseconds.
+  Serial.print(millis());
+  Serial.print(DELIMITER);
 
-    // data1
-    Serial.print(0);
-    Serial.print(",");
-  */
-  // data2
-  Serial.print(mPercentChange, 2);
-  //Serial.print(",");
-
+  // data1
+  Serial.print(mCurrentRead);
+  Serial.print(DELIMITER);
+  
   // Add a line break to define the end of the serial message.
   Serial.println();
 }
