@@ -16,19 +16,20 @@ const String DELIMITER = ",";
 const String GROUP_ID = "groupID";
 const String DEVICE_ID = "deviceID";
 
-// A variable to hold the current seismograph reading.
+// A variable to hold the accelerometer reading.
 int mCurrentRead = 0;
 
 // A time interval in milliseconds used as a delay between each iteration of the main loop.
 static int mDelayTime = 75;
 
-
+// Setup function where we initialize serial communications.
 void setup()
 {
   Serial.begin(115200);
   CircuitPlayground.begin();
 }
 
+// Main loop runs repeatedly.
 void loop()
 {
   mCurrentRead = CircuitPlayground.motionY();
@@ -36,21 +37,20 @@ void loop()
   delay(mDelayTime);
 }
 
+/*
 
+  Formats the data for use with the Cordoba Excel Add-In.
+  The format:
+  groupID, deviceID, time, data1, data2, ...
+
+  To customize the worksheet you can send any data you want. Just add another comma and data point
+  following the existing format. Be sure to end with a line feed as this defines the end of the
+  serial message.
+
+*/
 void sendToSerial()
-{
-  /*
-
-    Formats the data for use with the Cordoba Excel Add-In.
-    The format:
-    groupID, deviceID, time, data1, data2, ...
-
-    To customize the worksheet you can send any data you want. Just add another comma and data point
-    following the existing format. Be sure to end with a line feed as this defines the end of the
-    serial message.
-
-  */
-  
+{  
+  // Each message to the Excel add-in needs to have these parameters.
   Serial.print(GROUP_ID);
   Serial.print(DELIMITER);
   Serial.print(DEVICE_ID);
@@ -60,9 +60,9 @@ void sendToSerial()
   Serial.print(millis());
   Serial.print(DELIMITER);
 
-  // data1
+  // data set 1
   Serial.print(mCurrentRead);
-  Serial.print(DELIMITER);
+  Serial.print(DELIMITER);  
   
   // Add a line break to define the end of the serial message.
   Serial.println();
