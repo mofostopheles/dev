@@ -8,8 +8,7 @@ from picraft import block
     arlo emerson, december 2016
     script builds the Taipei 101 skyscraper at current player's location
         
-    uses the picraft lib, see picraft.readthedocs.io/en/release-0.6/conversion.html
-    
+    uses the picraft lib, see picraft.readthedocs.io/en/release-0.6/conversion.html    
 '''
 class TaipeiBuilding():
 
@@ -56,11 +55,11 @@ class TaipeiBuilding():
                     
                     if floorWidth == 4:
                         if ((iz1 == 0 or iz1 == 3) and (ix1 == 1 or ix1 == 2)):
-                            blockType = block.GLASS.id
+                            blockType = block.GLASS_PANE.id
                         elif ((ix1 == 0 or ix1 == 3) and (iz1 == 1 or iz1 == 2)):
-                            blockType = block.GLASS.id
+                            blockType = block.GLASS_PANE.id
                         else:
-                            blockType = block.LAPIS_LAZULI_BLOCK.id
+                            blockType = block.DIAMOND_BLOCK.id
 
                     if floorWidth == 6:
                         if ((iz1 == 0 or iz1 == 5) and (ix1 == 2 or ix1 == 3)):
@@ -68,7 +67,7 @@ class TaipeiBuilding():
                         elif ((ix1 == 0 or ix1 == 5) and (iz1 == 2 or iz1 == 3)):
                             blockType = block.STONE_SLAB.id
                         else:
-                            blockType = block.LAPIS_LAZULI_BLOCK.id
+                            blockType = block.DIAMOND_BLOCK.id
                             
                     '''
                     if floorWidth == 6:
@@ -82,9 +81,36 @@ class TaipeiBuilding():
                     
                     w.blocks[Vector(newX + ix1 + offset, newY+iy1, newZ + iz1 + offset)] = Block(blockType, 0)        
 
+    def annihilateEverything(self):
+        x = w.player.pos.x
+        y = w.player.pos.y -1
+        z = w.player.pos.z
+        repoX = 0
+        repoY = 0
+        repoZ = 0
+        fieldWidth = 14 #must be an even number
+
+        #repo to ground level -1
+        w.player.pos = Vector(x, 0, z)
+        time.sleep(1)
+        
+        for iy1 in range(0, fieldWidth/2):
+            for ix1 in range(0, fieldWidth):
+                for iz1 in range(0, fieldWidth):
+                    if iz1 == fieldWidth/2 and ix1 == fieldWidth/2 and iy1 == 0:
+                        #at the midpoint
+                        repoX = x+ix1
+                        repoY = 0
+                        repoZ = z+iz1
+                    w.blocks[Vector(x+ix1, y+iy1, z+iz1)] = Block(block.AIR.id, 0)
+
+        #repo to center of the field we just cleared
+        w.player.pos = Vector(repoX, repoY-1, repoZ)
+
+        
             
     def makeFoundation(self):
-        basicBlockType = block.LAPIS_LAZULI_BLOCK.id
+        basicBlockType = block.DIAMOND_BLOCK.id
   
         #print('make foundation')
         #print( w.player.pos )
@@ -104,8 +130,12 @@ class TaipeiBuilding():
             newY += 1 #increment by 1 to go up that many levels
                
             for ix1 in range(0, 8):
-                for iz1 in range(0, 8): 
-                    w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(basicBlockType, 0)
+                for iz1 in range(0, 8):
+                    if ((ix1 > 2 and ix1 < 5) and (iz1 == 0 or iz1 == 7)) or \
+                        ((iz1 > 2 and iz1 < 5) and (ix1 == 0 or ix1 == 7)):
+                        w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(block.STONE_SLAB.id, 0)
+                    else:
+                        w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(basicBlockType, 0)
 
         #### foundation part II ####                
         #reset and shift x/z by 1 so the next level is concentric
@@ -116,8 +146,12 @@ class TaipeiBuilding():
             newY += 1 #increment by 1 to go up that many levels
             
             for ix1 in range(0, 6):                
-                for iz1 in range(0, 6):                
-                    w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(basicBlockType, 0)
+                for iz1 in range(0, 6):
+                    if ((ix1 > 1 and ix1 < 4) and (iz1 == 0 or iz1 == 5)) or \
+                        ((iz1 > 1 and iz1 < 4) and (ix1 == 0 or ix1 == 5)):
+                        w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(block.STONE_SLAB.id, 0)
+                    else:
+                        w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(basicBlockType, 0)
 
         #### foundation part III ####        
         #reset and shift x/z by 1 so the next level is concentric
@@ -133,7 +167,11 @@ class TaipeiBuilding():
         
             for ix1 in range(0, 4):
                 for iz1 in range(0, 4):                
-                    w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(basicBlockType, 0)
+                    if ((ix1 > 0 and ix1 < 3) and (iz1 == 0 or iz1 == 3)) or \
+                        ((iz1 > 0 and iz1 < 3) and (ix1 == 0 or ix1 == 3)):
+                        w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(block.STONE_SLAB.id, 0)
+                    else:
+                        w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(basicBlockType, 0)
 
         #### build 1 floors of stone ####
         newX = x + 2
@@ -143,16 +181,31 @@ class TaipeiBuilding():
         
         for ix1 in range(0, 4):
             for iz1 in range(0, 4):
-                if ((iz1 == 1 or iz1 == 2) and (ix1 == 1 or ix1 == 2)):
-                    blockType = block.GLASS.id
+                
+                if ((iz1 == 1 or iz1 == 2) and (ix1 == 1 or ix1 == 2)):                    
+                    blockType = block.STONE.id
                 else:
-                    blockType = block.LAPIS_LAZULI_BLOCK.id
-            
+                    blockType = block.DIAMOND_ORE.id
+
                 w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(blockType, 0)
 
+        #### build round looking feature on all four sides
         
-        #### build the main floors ####            
+        newX = x + 1
+        newZ = z + 1
 
+
+        for ix1 in range(0, 6):                
+            for iz1 in range(0, 6):
+                if ((ix1 > 1 and ix1 < 4) and (iz1 == 0 or iz1 == 5)) or \
+                    ((iz1 > 1 and iz1 < 4) and (ix1 == 0 or ix1 == 5)):
+                    w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(block.DIAMOND_ORE.id, 0)
+                #else:
+                    #w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(block.AIR.id, 0)
+                
+        
+        #### build the main floors ####
+                    
         #reset and shift to where we want to start building floors
         newY += 1
         newX = x + 1
@@ -168,25 +221,42 @@ class TaipeiBuilding():
         newX = x + 3
         newZ = z + 3
         blockType = basicBlockType
+
+        #put four diamond ore blocks at the corners of the antenna mast
+        w.blocks[Vector(newX-1, newY+1, newZ-1)] = Block(block.DIAMOND_ORE.id, 0)
+        w.blocks[Vector(newX+2, newY+1, newZ-1)] = Block(block.DIAMOND_ORE.id, 0)
+        w.blocks[Vector(newX+2, newY+1, newZ+2)] = Block(block.DIAMOND_ORE.id, 0)
+        w.blocks[Vector(newX-1, newY+1, newZ+2)] = Block(block.DIAMOND_ORE.id, 0)
+
+        #put torches on top of these corner blocks
+        w.blocks[Vector(newX-1, newY+2, newZ-1)] = Block(block.TORCH.id, 0)
+        w.blocks[Vector(newX+2, newY+2, newZ-1)] = Block(block.TORCH.id, 0)
+        w.blocks[Vector(newX+2, newY+2, newZ+2)] = Block(block.TORCH.id, 0)
+        w.blocks[Vector(newX-1, newY+2, newZ+2)] = Block(block.TORCH.id, 0)
         
-        #put the penthouse and antenna on the top
-        for iy1 in range(0, 10):
+        #antenna mast
+        for iy1 in range(0, 9):
             newY += 1 #increment by 1 to go up that many levels
 
             if iy1 > 4:
                 blockType = block.GLASS_PANE.id
-            if iy1 == 4:
+            elif iy1 == 4:
                 blockType = block.GLOWSTONE_BLOCK.id                
+            else:
+                blockType = block.DIAMOND_ORE.id                
             
             for ix1 in range(0, 2):
                 for iz1 in range(0, 2):                
                     w.blocks[Vector(newX + ix1, newY, newZ + iz1)] = Block(blockType, 0)
-
-        
+            
+        #repo to outside the building
+        w.player.pos = Vector(newX + 5, 10, newZ - 3)
+        print("all done!")
 
 w = World()
 tb = TaipeiBuilding()
+tb.annihilateEverything()
+time.sleep(1) #sleep else this thing crashes
 tb.makeFoundation()
 
 
-#tb.makeBrickSampler()
