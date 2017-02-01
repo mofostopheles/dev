@@ -121,8 +121,11 @@ class ThumbnailGUI():
 
 		for child in self.mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
 
-		# self.root.bind('<Return>', self.makeGrid)
+		#self.root.bind('<Return>', self.wrapperCall)
 		self.root.mainloop()
+
+	def wrapperCall(self, pArg1):
+		self.makeGrid()
 
 	def saveData(self):
 		"""
@@ -202,7 +205,7 @@ class ThumbnailGUI():
 		elif sys.platform == 'linux2':
 			subprocess.Popen(['xdg-open', pDirectory])
 		elif sys.platform == 'win32':
-			subprocess.Popen(['explorer', pDirectory])
+			subprocess.Popen(['explorer', pDirectory.replace("/", "\\")])
 
 	def formValidation(self):
 		noflags = True
