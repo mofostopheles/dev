@@ -190,7 +190,7 @@ class ThumbnailGUI():
 			self.status_label["text"] = strings_en.FILE_HAS_BEEN_CREATED + "\n" + strDirectory + strFileName
 			print("file '" + strDirectory + strFileName + "' has been created.")
 			#askopenfilename(initialdir=strDirectory, initialfile=strFileName)
-			#self.openFolder(strDirectory)
+			self.openFolder(strDirectory)
 			# except Exception as e:
 			# 	print(e)
 			# else: 
@@ -200,7 +200,7 @@ class ThumbnailGUI():
 		if sys.platform == 'darwin':
 			subprocess.Popen(['open', '--', pDirectory])
 		elif sys.platform == 'linux2':
-			subprocess.Popen(['xdg-open', '--', pDirectory])
+			subprocess.Popen(['xdg-open', pDirectory])
 		elif sys.platform == 'win32':
 			subprocess.Popen(['explorer', pDirectory])
 
