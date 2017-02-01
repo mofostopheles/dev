@@ -1,0 +1,33 @@
+/*
+
+	arlo emerson
+	2017 - essence digital
+	this is going to need a bunch of sliders.
+	look at the after effects file, it has a comp already running
+
+
+*/
+
+
+var x = this.transform.position[0];
+var y = this.transform.position[1];
+
+var tileWidth = thisComp.layer("controls").effect("thumbnailWidth")("Slider");
+var running = thisComp.layer("controls").effect("animationRunning")("Checkbox");
+
+var frameNumber = timeToFrames(t = time + thisComp.displayStartTime, fps = 1.0 / thisComp.frameDuration, isDuration = false);
+var xAxisRange =   thisComp.layer("controls").effect("xAxisRange")("Slider");
+var xAxisTicker =  ((frameNumber - index) % xAxisRange)  + 1;
+var yAxisTicker = Math.floor((frameNumber+4 - index)/xAxisRange);
+
+//TODO make this flag even matter...
+//right now when we stop tiles end up in off canvas defaults...not good!!!!
+if (running == 1)
+{
+	//move to the right
+	x = thisComp.layer("controls").effect("startingPosition")("Point")[0] + tileWidth *  (xAxisTicker);
+	y = thisComp.layer("controls").effect("startingPosition")("Point")[1] + tileWidth * (yAxisTicker)
+}
+
+//return it here
+[x, y];
