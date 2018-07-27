@@ -1,0 +1,8 @@
+//shift a layer over by x every frame
+
+amount = 135.8;
+byFrames = 2;
+
+x=transform.position[0]-Math.floor(  timeToFrames(  time-inPoint  )/byFrames)*amount;
+y=transform.position[1];
+[x,y]
