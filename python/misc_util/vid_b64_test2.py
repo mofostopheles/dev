@@ -1,5 +1,5 @@
 '''
-  Based on original script for encoding process -- essence digital
+  Based on original script for encoding process -- Arlo Emerson Design LLC
 
   Script converts video to PNG, then PNG into JPG, then base64 from each JPG.
   For initial testing purposes we rebuild a JPEG from each base64 segment so we can preview the quality.

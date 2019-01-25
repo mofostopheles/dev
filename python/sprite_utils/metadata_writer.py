@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
 
-__author__ = "Arlo Emerson <arlo.emerson@essenceglobal.com>"
+__author__ = "Arlo Emerson <arloemerson@gmail.com>"
 __version__ = "1.1"
 __date__ = "6/22/2018"
 

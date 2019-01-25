@@ -3,7 +3,7 @@
 
 """
 arlo emerson, 9/08/2017
-arlo.emerson@essenceglobal.com
+arloemerson@gmail.com
 Code embraced and extended from an original script by:
 """
 __author__ = "http://code.activestate.com/recipes/578267-use-pil-to-make-a-contact-sheet-montage-of-images/"

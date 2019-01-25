@@ -2,7 +2,7 @@
 
 """
 modified by arlo emerson, 1/27/2017
-arlo.emerson@essencedigital.com
+arloemerson@gmail.com
 """
 
 import glob

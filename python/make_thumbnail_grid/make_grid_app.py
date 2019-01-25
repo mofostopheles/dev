@@ -132,8 +132,8 @@ class ThumbnailGUI():
 			example....
 
 			{"thumbnailSize": "60",
-			"destinationDirectory": "D:/_projects/Essence/round2/art/thumbs2/",
-			"sourceDirectory": "D:/_projects/Essence/round2/art/source_images/",
+			"destinationDirectory": "D:/_projects/Arlo Emerson Design LLC/round2/art/thumbs2/",
+			"sourceDirectory": "D:/_projects/Arlo Emerson Design LLC/round2/art/source_images/",
 			"gridWidth": "5",
 			"gridHeight": "2",
 			"margins": 10}
