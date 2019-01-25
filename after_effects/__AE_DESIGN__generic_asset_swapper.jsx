@@ -1,6 +1,6 @@
 ﻿/**********************************************************
 
-__author__ = "Arlo Emerson <arlo.emerson@gmail.com>"
+__author__ = "Arlo Emerson <arloemerson@gmail.com>"
 __version__ = "1.0"
 __date__ = "11/13/2018"
 
