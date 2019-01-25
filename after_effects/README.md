@@ -10,4 +10,4 @@ These scripts are the production workhorses to streamline sprite and render prod
 * Windows: C:\Program Files\Adobe\Adobe After Effects [version]\Support Files\Scripts  
 * Mac: Applications/Adobe After Effects [version]  
 
-## File name indicates functionality. See comments in code headers for specifics. 
+### File name indicates functionality. See comments in code headers for specifics. 
