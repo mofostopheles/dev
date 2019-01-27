@@ -1,0 +1,4 @@
+//this goes on source text property of a text field
+var myList=["q","t","i","j","s","b","z","u","k","g","w"];
+var frameNumber =  timeToFrames(  time-inPoint  );
+myList[ frameNumber ]; 
