@@ -23,7 +23,7 @@ start();
 function start()
 {
 
-    var layerNameToReplace = "INDIE_RJ_Glasses_154104_v4_fnl_rgb_output_v3_GRACOL"; // <---- this is the SOURCE name of the layer you want to find
+    var layerNameToReplace = "layer_name_here"; // <---- this is the SOURCE name of the layer you want to find
 
     app.beginUndoGroup("dm_render");
 
