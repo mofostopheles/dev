@@ -5,7 +5,7 @@ from BeautifulSoup import BeautifulSoup
 import urllib, urllib2, argparse, textwrap
 import lib.TextColors as TextColors
 
-__author__ = "Arlo Emerson <arlo.emerson@essenceglobal.com>"
+__author__ = "Arlo Emerson <arloemerson@gmail..com>"
 __version__ = "1.0"
 __date__ = "8/8/2018"
 
