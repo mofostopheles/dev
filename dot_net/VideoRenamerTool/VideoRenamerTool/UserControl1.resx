@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>20, 20</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonChooseDir.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="buttonChooseDir.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 18</value>
+  </data>
+  <data name="buttonChooseDir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonChooseDir.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonChooseDir.Text" xml:space="preserve">
+    <value>Choose Directory</value>
+  </data>
+  <data name="&gt;&gt;buttonChooseDir.Name" xml:space="preserve">
+    <value>buttonChooseDir</value>
+  </data>
+  <data name="&gt;&gt;buttonChooseDir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonChooseDir.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonChooseDir.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelSelectedDir.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSelectedDir.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="labelSelectedDir.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 65</value>
+  </data>
+  <data name="labelSelectedDir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 17</value>
+  </data>
+  <data name="labelSelectedDir.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelSelectedDir.Text" xml:space="preserve">
+    <value>Please choose a directory</value>
+  </data>
+  <data name="&gt;&gt;labelSelectedDir.Name" xml:space="preserve">
+    <value>labelSelectedDir</value>
+  </data>
+  <data name="&gt;&gt;labelSelectedDir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSelectedDir.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelSelectedDir.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelCurrentDir.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCurrentDir.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt, style=Bold</value>
+  </data>
+  <data name="labelCurrentDir.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 65</value>
+  </data>
+  <data name="labelCurrentDir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 17</value>
+  </data>
+  <data name="labelCurrentDir.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelCurrentDir.Text" xml:space="preserve">
+    <value>Current Directory:</value>
+  </data>
+  <data name="&gt;&gt;labelCurrentDir.Name" xml:space="preserve">
+    <value>labelCurrentDir</value>
+  </data>
+  <data name="&gt;&gt;labelCurrentDir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCurrentDir.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelCurrentDir.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelFileExt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFileExt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="labelFileExt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>629, 42</value>
+  </data>
+  <data name="labelFileExt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="labelFileExt.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelFileExt.Text" xml:space="preserve">
+    <value>. [FILE EXT]</value>
+  </data>
+  <data name="&gt;&gt;labelFileExt.Name" xml:space="preserve">
+    <value>labelFileExt</value>
+  </data>
+  <data name="&gt;&gt;labelFileExt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFileExt.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelFileExt.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelScene.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelScene.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt, style=Bold</value>
+  </data>
+  <data name="labelScene.Location" type="System.Drawing.Point, System.Drawing">
+    <value>559, 65</value>
+  </data>
+  <data name="labelScene.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 17</value>
+  </data>
+  <data name="labelScene.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelScene.Text" xml:space="preserve">
+    <value>Scene</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>189, 20</value>
+  </metadata>
+  <data name="labelScene.ToolTip" xml:space="preserve">
+    <value>Scene is the starting index number of a NNNN format</value>
+  </data>
+  <data name="&gt;&gt;labelScene.Name" xml:space="preserve">
+    <value>labelScene</value>
+  </data>
+  <data name="&gt;&gt;labelScene.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScene.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelScene.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textBoxDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 36</value>
+  </data>
+  <data name="textBoxDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="textBoxDate.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBoxDate.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="textBoxDate.ToolTip" xml:space="preserve">
+    <value>Date is extracted from ancestor folder</value>
+  </data>
+  <data name="&gt;&gt;textBoxDate.Name" xml:space="preserve">
+    <value>textBoxDate</value>
+  </data>
+  <data name="&gt;&gt;textBoxDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxDate.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBoxDate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelUnderscore3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelUnderscore3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="labelUnderscore3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 42</value>
+  </data>
+  <data name="labelUnderscore3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 16</value>
+  </data>
+  <data name="labelUnderscore3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelUnderscore3.Text" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;labelUnderscore3.Name" xml:space="preserve">
+    <value>labelUnderscore3</value>
+  </data>
+  <data name="&gt;&gt;labelUnderscore3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelUnderscore3.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelUnderscore3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt, style=Bold</value>
+  </data>
+  <data name="labelDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 65</value>
+  </data>
+  <data name="labelDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 17</value>
+  </data>
+  <data name="labelDate.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelDate.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="labelDate.ToolTip" xml:space="preserve">
+    <value>Date is extracted from ancestor folder</value>
+  </data>
+  <data name="&gt;&gt;labelDate.Name" xml:space="preserve">
+    <value>labelDate</value>
+  </data>
+  <data name="&gt;&gt;labelDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDate.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelDate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>548, 36</value>
+  </data>
+  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 25</value>
+  </data>
+  <data name="numericUpDown1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="numericUpDown1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="numericUpDown1.ToolTip" xml:space="preserve">
+    <value>Scene is the starting index number of a NNNN format</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown1.Name" xml:space="preserve">
+    <value>numericUpDown1</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelCamera.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCamera.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt, style=Bold</value>
+  </data>
+  <data name="labelCamera.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelCamera.Location" type="System.Drawing.Point, System.Drawing">
+    <value>426, 65</value>
+  </data>
+  <data name="labelCamera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="labelCamera.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelCamera.Text" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="labelCamera.ToolTip" xml:space="preserve">
+    <value>Camera is extracted from footage folder name</value>
+  </data>
+  <data name="&gt;&gt;labelCamera.Name" xml:space="preserve">
+    <value>labelCamera</value>
+  </data>
+  <data name="&gt;&gt;labelCamera.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCamera.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;labelCamera.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxCamera.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 36</value>
+  </data>
+  <data name="textBoxCamera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="textBoxCamera.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="textBoxCamera.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="textBoxCamera.ToolTip" xml:space="preserve">
+    <value>Camera is extracted from footage folder name</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamera.Name" xml:space="preserve">
+    <value>textBoxCamera</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamera.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamera.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBoxCamera.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>527, 42</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 16</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 96</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>933, 96</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Files in this directory will be renamed to</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonRenameFiles.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="buttonRenameFiles.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="buttonRenameFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>798, 300</value>
+  </data>
+  <data name="buttonRenameFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 34</value>
+  </data>
+  <data name="buttonRenameFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="buttonRenameFiles.Text" xml:space="preserve">
+    <value>Rename Files</value>
+  </data>
+  <data name="&gt;&gt;buttonRenameFiles.Name" xml:space="preserve">
+    <value>buttonRenameFiles</value>
+  </data>
+  <data name="&gt;&gt;buttonRenameFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRenameFiles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonRenameFiles.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxConfirmEach.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxConfirmEach.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="checkBoxConfirmEach.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxConfirmEach.Location" type="System.Drawing.Point, System.Drawing">
+    <value>632, 308</value>
+  </data>
+  <data name="checkBoxConfirmEach.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 21</value>
+  </data>
+  <data name="checkBoxConfirmEach.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxConfirmEach.Text" xml:space="preserve">
+    <value>Confirm each directory</value>
+  </data>
+  <data name="checkBoxConfirmEach.ToolTip" xml:space="preserve">
+    <value>Confirm batch change for each sub-directory. Leave unchecked to only confirm first directory.</value>
+  </data>
+  <data name="&gt;&gt;checkBoxConfirmEach.Name" xml:space="preserve">
+    <value>checkBoxConfirmEach</value>
+  </data>
+  <data name="&gt;&gt;checkBoxConfirmEach.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxConfirmEach.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxConfirmEach.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbxAVI.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxAVI.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbxAVI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 33</value>
+  </data>
+  <data name="cbxAVI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 21</value>
+  </data>
+  <data name="cbxAVI.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbxAVI.Text" xml:space="preserve">
+    <value>.avi</value>
+  </data>
+  <data name="&gt;&gt;cbxAVI.Name" xml:space="preserve">
+    <value>cbxAVI</value>
+  </data>
+  <data name="&gt;&gt;cbxAVI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxAVI.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxAVI.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbxBRAW.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxBRAW.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbxBRAW.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 33</value>
+  </data>
+  <data name="cbxBRAW.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 21</value>
+  </data>
+  <data name="cbxBRAW.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbxBRAW.Text" xml:space="preserve">
+    <value>.braw</value>
+  </data>
+  <data name="&gt;&gt;cbxBRAW.Name" xml:space="preserve">
+    <value>cbxBRAW</value>
+  </data>
+  <data name="&gt;&gt;cbxBRAW.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxBRAW.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxBRAW.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbxMXF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxMXF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbxMXF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 33</value>
+  </data>
+  <data name="cbxMXF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 21</value>
+  </data>
+  <data name="cbxMXF.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbxMXF.Text" xml:space="preserve">
+    <value>.mxf</value>
+  </data>
+  <data name="&gt;&gt;cbxMXF.Name" xml:space="preserve">
+    <value>cbxMXF</value>
+  </data>
+  <data name="&gt;&gt;cbxMXF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxMXF.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxMXF.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbxMOV.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxMOV.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbxMOV.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 33</value>
+  </data>
+  <data name="cbxMOV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 21</value>
+  </data>
+  <data name="cbxMOV.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbxMOV.Text" xml:space="preserve">
+    <value>.mov</value>
+  </data>
+  <data name="&gt;&gt;cbxMOV.Name" xml:space="preserve">
+    <value>cbxMOV</value>
+  </data>
+  <data name="&gt;&gt;cbxMOV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxMOV.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxMOV.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbxMP4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbxMP4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 33</value>
+  </data>
+  <data name="cbxMP4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 21</value>
+  </data>
+  <data name="cbxMP4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbxMP4.Text" xml:space="preserve">
+    <value>.mp4</value>
+  </data>
+  <data name="&gt;&gt;cbxMP4.Name" xml:space="preserve">
+    <value>cbxMP4</value>
+  </data>
+  <data name="&gt;&gt;cbxMP4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbxMP4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbxMP4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 212</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>456, 76</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Restrict to these types (leave unchecked to change ANY file type)</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="folderBrowserDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>286, 20</value>
+  </metadata>
+  <data name="checkBoxWriteMetadata.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxWriteMetadata.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="checkBoxWriteMetadata.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxWriteMetadata.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 34</value>
+  </data>
+  <data name="checkBoxWriteMetadata.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 21</value>
+  </data>
+  <data name="checkBoxWriteMetadata.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxWriteMetadata.Text" xml:space="preserve">
+    <value>Write metadata (MP4 and MOV only)</value>
+  </data>
+  <data name="checkBoxWriteMetadata.ToolTip" xml:space="preserve">
+    <value>The exif tool must be installed at "C:\Program Files\exiftool-11.73\exiftool.exe"</value>
+  </data>
+  <data name="&gt;&gt;checkBoxWriteMetadata.Name" xml:space="preserve">
+    <value>checkBoxWriteMetadata</value>
+  </data>
+  <data name="&gt;&gt;checkBoxWriteMetadata.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxWriteMetadata.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;checkBoxWriteMetadata.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBoxShowCMD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxShowCMD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="checkBoxShowCMD.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxShowCMD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 34</value>
+  </data>
+  <data name="checkBoxShowCMD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 21</value>
+  </data>
+  <data name="checkBoxShowCMD.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxShowCMD.Text" xml:space="preserve">
+    <value>Show command line</value>
+  </data>
+  <data name="checkBoxShowCMD.ToolTip" xml:space="preserve">
+    <value>Don't check this box if processing many files</value>
+  </data>
+  <data name="&gt;&gt;checkBoxShowCMD.Name" xml:space="preserve">
+    <value>checkBoxShowCMD</value>
+  </data>
+  <data name="&gt;&gt;checkBoxShowCMD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxShowCMD.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;checkBoxShowCMD.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>511, 211</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>456, 77</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Metadata</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelStatusMessage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStatusMessage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="labelStatusMessage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 316</value>
+  </data>
+  <data name="labelStatusMessage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 17</value>
+  </data>
+  <data name="labelStatusMessage.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;labelStatusMessage.Name" xml:space="preserve">
+    <value>labelStatusMessage</value>
+  </data>
+  <data name="&gt;&gt;labelStatusMessage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStatusMessage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelStatusMessage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>994, 356</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
+    <value>folderBrowserDialog1</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog2.Name" xml:space="preserve">
+    <value>folderBrowserDialog2</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UserControl1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

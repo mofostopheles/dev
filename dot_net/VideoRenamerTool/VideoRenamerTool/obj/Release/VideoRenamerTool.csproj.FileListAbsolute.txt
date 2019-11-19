@@ -1,0 +1,14 @@
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\bin\Release\VideoRenamerTool.exe
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\bin\Release\VideoRenamerTool.pdb
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\bin\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\bin\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\obj\Release\VideoRenamerTool.Form1.resources
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\obj\Release\VideoRenamerTool.UserControl1.resources
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\obj\Release\VideoRenamerTool.csproj.GenerateResource.cache
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\obj\Release\VideoRenamerTool.csproj.CoreCompileInputs.cache
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\obj\Release\VideoRenamerTool.csproj.CopyComplete
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\obj\Release\VideoRenamerTool.exe
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\obj\Release\VideoRenamerTool.pdb
+C:\Users\v-fremer\source\repos\VideoRenamerTool\VideoRenamerTool\obj\Release\VideoRenamerTool.csprojAssemblyReference.cache
