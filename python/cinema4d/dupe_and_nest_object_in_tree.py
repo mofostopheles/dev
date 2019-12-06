@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
 
+raise Exception( 'DEPRECATED, please import the branch_iterator instead.' )
+
 __author__ = "Arlo Emerson"
 __version__ = "1.0"
 __email__ = "arloemerson@gmail.com"
