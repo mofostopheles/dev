@@ -20,12 +20,15 @@ new_replacement = doc.SearchObject("asdf")
 tree = branch.BranchIterator(first_item)
 items_to_remove = []
 
-for item in tree:
-	if item.GetName() == "something_to_replace":
-		new_replacement.GetClone().InsertAfter( item )
-		items_to_remove.append(item)
+def insert_clones():
+	for item in tree:
+		if item.GetName() == "something_to_replace":
+			new_replacement.GetClone().InsertAfter( item )
+			yield item
 
-for remove_this in items_to_remove:
+do_work = insert_clones()
+
+for remove_this in do_work:
 	remove_this.Remove()
 
 c4d.EventAdd()
