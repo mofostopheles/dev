@@ -42,7 +42,7 @@ var compRenamer = function() {
                 }
             }
 
-            alert(taskCount + ' selectedComp/s were renamed.');
+            alert(taskCount + ' comp/s were renamed.');
         }
     };
 };

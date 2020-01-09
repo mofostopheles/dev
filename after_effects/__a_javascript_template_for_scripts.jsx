@@ -1,5 +1,5 @@
 /**
- * An After Effects script to turn off all audio on all layers on selected comps.
+ * An After Effects script template. Put description here.
  */
 
 // Copyright © 2020, Arlo Emerson
@@ -26,25 +26,26 @@ app.beginUndoGroup('work_undo');
 
 /**
  * Function with inner main function. Invoked at bottom of this file.
- * Turn off all audio on all layers on selected comps.
+ * Description here.
  */
-var turnOffAudioOnAllLayers = function() {
+var nameOfFunction = function() {
     return {
 
         arrSelectedComps: getSelectedComps(),
         main: function(argument) {
             var selectedComp;
+            var taskCount = 0;
 
             for (var k = this.arrSelectedComps.length - 1; k >= 0; k--) {
                 selectedComp = this.arrSelectedComps[k];
                 var layer;
-                var taskCount = 0;
-
+                // loop layers, find the target layer
                 for (var j = 1; j <= selectedComp.layers.length; j++) {
-                    layer = selectedComp.layers[j];
+                    if (selectedComp.layers[j].name.indexOf(argument) !== -1) {
+                        layer = selectedComp.layers[j];
 
-                    if (layer.hasAudio === true) {
-                        layer.audioEnabled = false;
+                        // Code here
+
                         taskCount++;
                     }
                 }
@@ -65,6 +66,6 @@ var vars = {
  * Runs the script.
  * Calls main and passes args (if any).
  */
-turnOffAudioOnAllLayers().main(vars.key);
+nameOfFunction().main(vars.key);
 
 app.endUndoGroup();
