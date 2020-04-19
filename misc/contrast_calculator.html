@@ -1,0 +1,45 @@
+
+
+<script>
+
+function luminanace(r, g, b) {
+    var a = [r, g, b].map(function (v) {
+        v /= 255;
+        return v <= 0.03928
+            ? v / 12.92
+            : Math.pow( (v + 0.055) / 1.055, 2.4 );
+    });
+    return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+}
+
+function contrast(rgb1, rgb2) {
+    var lum1 = luminanace(rgb1[0], rgb1[1], rgb1[2]);
+    var lum2 = luminanace(rgb2[0], rgb2[1], rgb2[2]);
+    var brightest = Math.max(lum1, lum2);
+    var darkest = Math.min(lum1, lum2);
+    return ((brightest + 0.05) / (darkest + 0.05)).toFixed(2);
+}
+
+var rgbToHex = function (rgb) {
+    var hex = Number(rgb).toString(16);
+    if (hex. length < 2) {
+        hex = "0" + hex;
+    }
+    return hex;
+};
+
+for (var i=0;i<=255;i++){
+    var hexVal = rgbToHex(i);
+    // 233 = #e9e9e9
+    console.log( contrast([i,i,i], [233,233,233]), i, hexVal + hexVal + hexVal );
+    // console.log( contrast([i,i,i], [255,255,255]), i, hexVal + hexVal + hexVal );
+}
+
+// console.log( contrast([204, 204, 204], [255,255,255]) );
+// console.log( contrast([164,164,164], [255,255,255]) );
+// console.log( contrast([133,133,133], [255,255,255]) );
+// console.log( contrast([107,107,107], [255,255,255]) );
+// console.log( contrast([182,182,182], [255,255,255]) );
+// console.log( contrast([0,0,0], [255,255,255]) );
+
+</script>

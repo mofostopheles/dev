@@ -1,5 +1,7 @@
-/**
- * An After Effects script to turn off all audio on all layers on selected comps.
+﻿/**
+ * Replaces layers named "FLARE" with a layer considered the master flare.
+ * This is used so we can update hundreds of optical flare layers.
+ * The master is turned off after we do this.
  */
 
 // Copyright © 2020, Arlo Emerson
@@ -26,28 +28,36 @@ app.beginUndoGroup('work_undo');
 
 /**
  * Function with inner main function. Invoked at bottom of this file.
- * Turn off all audio on all layers on selected comps.
+ * Loop the comp, add all "FLARE" layers to an array,
+ * then loop that array and swap out everybody with a copy of "FLARE_MASTER".
+ * Rename and set start time accordingly.
  */
-var turnOffAudioOnAllLayers = function() {
+var hideShyAndLockLayers = function() {
     return {
 
         arrSelectedComps: getSelectedComps(),
-        main: function(argument) {
+        main: function(layerToFind) {
             var selectedComp;
+            var taskCount = 0;
 
             for (var k = this.arrSelectedComps.length - 1; k >= 0; k--) {
                 selectedComp = this.arrSelectedComps[k];
+
                 var layer;
-                var taskCount = 0;
 
-                for (var j = 1; j <= selectedComp.layers.length; j++) {
-                    layer = selectedComp.layers[j];
-
-                    if (layer.hasAudio === true) {
-                        layer.audioEnabled = false;
-                        taskCount++;
+                // loop layers, find the target layer
+                for (var j=1; j<=selectedComp.layers.length; j++) {
+                    if (selectedComp.layers[j].name.indexOf(layerToFind) != -1) {
+                        layer = selectedComp.layers[j];
+                        layer.enabled = false;
+                        layer.locked = true;
+                        layer.shy = true;
                     }
                 }
+
+                selectedComp.hideShyLayers = true;
+
+                taskCount++;
             }
             aalert(taskCount + ' items/s were touched.');
         }
@@ -58,13 +68,13 @@ var turnOffAudioOnAllLayers = function() {
  * Anything to be passed to the script's main method is set here.
  */
 var vars = {
-    key: 'value'
+    layerToFind: 'connection_'
 };
 
 /**
  * Runs the script.
  * Calls main and passes args (if any).
  */
-turnOffAudioOnAllLayers().main(vars.key);
+hideShyAndLockLayers().main(vars.layerToFind);
 
 app.endUndoGroup();

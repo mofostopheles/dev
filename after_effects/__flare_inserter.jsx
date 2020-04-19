@@ -1,5 +1,5 @@
-/**
- * An After Effects script to turn off all audio on all layers on selected comps.
+﻿/**
+ * Add flares above each "connection" null. Flare is taken from FLARE_MASTER layer.
  */
 
 // Copyright © 2020, Arlo Emerson
@@ -26,25 +26,32 @@ app.beginUndoGroup('work_undo');
 
 /**
  * Function with inner main function. Invoked at bottom of this file.
- * Turn off all audio on all layers on selected comps.
+ * Add flares above each "connection" null. Flare is taken from FLARE_MASTER layer.
  */
-var turnOffAudioOnAllLayers = function() {
+var flareInserter = function() {
     return {
 
         arrSelectedComps: getSelectedComps(),
-        main: function(argument) {
+        main: function(layerToFind) {
             var selectedComp;
+            var taskCount = 0;
 
             for (var k = this.arrSelectedComps.length - 1; k >= 0; k--) {
                 selectedComp = this.arrSelectedComps[k];
-                var layer;
-                var taskCount = 0;
 
-                for (var j = 1; j <= selectedComp.layers.length; j++) {
-                    layer = selectedComp.layers[j];
+                var tmpSelectedLayers = selectedComp.selectedLayers;
+                var masterLayer = selectedComp.layers[4]; // hard-coding for now
 
-                    if (layer.hasAudio === true) {
-                        layer.audioEnabled = false;
+                // loop in reverse, clone and place a FLARE_MASTER above each one.
+                for (var j=tmpSelectedLayers.length-1; j>=0; j--) {
+                    if (tmpSelectedLayers[j].name.indexOf('connection') != -1) {
+                        var tmpLayer = masterLayer.duplicate();
+                        tmpLayer.moveBefore(tmpSelectedLayers[j]);
+                        tmpLayer.enabled = true;
+                        tmpLayer.name = "FLARE";
+                        var tmpInPoint = tmpSelectedLayers[j].inPoint;
+                        tmpLayer.inPoint = tmpInPoint;
+                        tmpLayer.locked = true;
                         taskCount++;
                     }
                 }
@@ -58,13 +65,13 @@ var turnOffAudioOnAllLayers = function() {
  * Anything to be passed to the script's main method is set here.
  */
 var vars = {
-    key: 'value'
+    layerToFind: 'FLARE_MASTER'
 };
 
 /**
  * Runs the script.
  * Calls main and passes args (if any).
  */
-turnOffAudioOnAllLayers().main(vars.key);
+flareInserter().main(vars.layerToFind);
 
 app.endUndoGroup();
